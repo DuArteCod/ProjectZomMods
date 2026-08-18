@@ -1,0 +1,50 @@
+module EaBrabaMod
+{
+    craftRecipe PackEaBraba
+    {
+        timedAction = PackCigarettes,
+        time = 25,
+        Tags = InHandCraft;CanBeDoneInDark,
+        category = Miscellaneous,
+        inputs
+        {
+            item 20 [EaBrabaMod.EaBrabaCigarette] flags[AllowFavorite;InheritFavorite],
+        }
+        outputs
+        {
+            item 1 EaBrabaMod.Pack,
+        }
+    }
+
+    craftRecipe UnpackEaBraba
+    {
+        timedAction = UnpackCigarettes,
+        time = 25,
+        Tags = InHandCraft;CanBeDoneInDark,
+        category = Miscellaneous,
+        inputs
+        {
+            item 1 [EaBrabaMod.Pack] mode:destroy flags[AllowFavorite;InheritFavorite],
+        }
+        outputs
+        {
+            item 20 EaBrabaMod.EaBrabaCigarette,
+        }
+    }
+
+    craftRecipe UnpackEaBrabaCarton
+    {
+        timedAction = UnPackBox_Small,
+        time = 5,
+        Tags = InHandCraft;Packing;CanBeDoneInDark,
+        category = Packing,
+        inputs
+        {
+            item 1 [EaBrabaMod.Carton] flags[AllowFavorite;InheritFavorite],
+        }
+        outputs
+        {
+            item 10 EaBrabaMod.Pack,
+        }
+    }
+}
