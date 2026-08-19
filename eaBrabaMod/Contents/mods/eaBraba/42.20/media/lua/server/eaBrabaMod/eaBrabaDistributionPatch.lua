@@ -50,7 +50,8 @@ end
 
 local function applyDistributions()
     for _, location in ipairs(spawnLocations) do
-        addToDistribution(location, "Base.Cigarette", CIGARETTE_SPAWN_RATE)
+        -- Usar o nome completo do item do mod para spawnar o item custom
+        addToDistribution(location, "EaBrabaMod.EaBrabaCigarette", CIGARETTE_SPAWN_RATE)
     end
 end
 
