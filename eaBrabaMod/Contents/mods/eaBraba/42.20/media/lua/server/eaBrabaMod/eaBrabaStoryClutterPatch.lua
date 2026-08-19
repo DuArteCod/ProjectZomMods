@@ -2,9 +2,9 @@
 
 if StoryClutter then
     local toAdd = {
-        ["CigarettePackSingle"] = {"Base.Cigarette"},
-        ["CigarettePackMulti"]  = {"Base.Cigarette"},
-        ["CigaretteCarton"]     = {"Base.Cigarette"},
+        ["CigarettePackSingle"] = {"EaBrabaMod.EaBrabaCigarette"},
+        ["CigarettePackMulti"]  = {"EaBrabaMod.EaBrabaCigarette"},
+        ["CigaretteCarton"]     = {"EaBrabaMod.EaBrabaCigarette"},
     }
     
     for storyType, items in pairs(toAdd) do
