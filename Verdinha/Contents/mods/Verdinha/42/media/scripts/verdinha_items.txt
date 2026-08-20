@@ -2,7 +2,7 @@ item Verdinha
 {
     Type                = Normal,
     DisplayName         = Verdinha,
-    Icon                = Cigarettes,
+    Icon                = verdinha,
     Weight              = 0.01,
     Smokeable           = TRUE,
     SmokeTime           = 100,
