@@ -58,3 +58,18 @@ local function onFillInventoryObjectContextMenu(player, context, items)
 end
 
 Events.OnFillInventoryObjectContextMenu.Add(onFillInventoryObjectContextMenu)
+
+-- Alterar icone de cigarro para Verdinha quando fumando
+local function onRenderSmoke(player)
+    local inv = player:getInventory()
+    if inv then
+        for i = 0, inv:getItems():size() - 1 do
+            local item = inv:getItems():get(i)
+            if item and item:getType() == "Cigarettes" then
+                item:setTexture("verdinha")
+            end
+        end
+    end
+end
+
+Events.OnRender.Add(onRenderSmoke)
