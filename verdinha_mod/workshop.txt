@@ -1,0 +1,6 @@
+version=1
+id=3786637258
+title=a Verdola papai
+description=🌿 Mod Verdinha B42 - O Cigarro Artesanal Definitivo 🌿
+tags=Build 42;Items;Pop Culture;Realistic;Silly/Fun;QoL
+visibility=public

@@ -1,0 +1,89 @@
+module VerdinhaMod
+{
+    item Verdinha
+    {
+        DisplayCategory = Junk,
+        ItemType = Food,
+        Weight = 0.01,
+        Icon = verdinha,
+        CantBeFrozen = true,
+        CustomContextMenu = Smoke,
+        EatType = Cigarettes,
+        HungerChange = 30,
+        ThirstChange = 30,
+        OnEat = RecipeCodeOnEat.consumeNicotine,
+        RequireInHandOrInventory = Base.CandleLit/Base.Matches/Base.Matchbox/Base.LighterDisposable/Base.Lighter/Base.LighterBBQ/Base.Lighter_Battery,
+        StressChange = -30,
+        StaticModel = Cigarette_Lit,
+        WorldStaticModel = Cigarette2,
+        Tags = base:useall;base:smokable,
+        SurvivalItem = true,
+        Eattime = 460,
+        InverseCoughProbability = 10,
+        InverseCoughProbabilitySmoker = 2,
+        UnhappyChange = -20,
+        BoredomChange = -50,
+        DisplayName = Verdinha,
+    }
+
+    item VerdinhaPack
+    {
+        DisplayCategory = Junk,
+        Weight = 0.2,
+        UseDelta = 0.05,
+        ItemType = Drainable,
+        UseWhileEquipped = false,
+        KeepOnDeplete = false,
+        Icon = verdinha_pack,
+        StaticModel = Cigarette_Lit,
+        WorldStaticModel = CigarettePack_Closed,
+        Tags = base:packed;base:lessfull;base:consumable;base:smokable,
+        SurvivalItem = true,
+        EatType = Cigarettes,
+        OnEat = RecipeCodeOnEat.consumeNicotine,
+        StressChange = -30,
+        Eattime = 460,
+        RequireInHandOrInventory = Base.CandleLit/Base.Matches/Base.Matchbox/Base.LighterDisposable/Base.Lighter/Base.LighterBBQ/Base.Lighter_Battery,
+        CustomContextMenu = Smoke,
+        InverseCoughProbability = 10,
+        InverseCoughProbabilitySmoker = 2,
+        UnhappyChange = -20,
+        BoredomChange = -50,
+        DoubleClickRecipe = AbrirMacoVerdinha,
+        DisplayName = 10 da verdinha,
+    }
+
+    item VerdinhaBox
+    {
+        DisplayCategory = Junk,
+        Weight = 2.0,
+        ItemType = Normal,
+        Icon = verdinha_box,
+        WorldStaticModel = CigaretteCarton,
+        Tags = base:ignorezombiedensity,
+        SurvivalItem = false,
+        DoubleClickRecipe = AbrirCaixaVerdinha,
+        DisplayName = 100 da verdinha,
+    }
+
+    /* --- RECEITAS CLÁSSICAS QUE FAZEM O MOD APARECER --- */
+
+    recipe AbrirCaixaVerdinha
+    {
+        VerdinhaBox,
+
+        Result:VerdinhaPack=10,
+        Sound:PutItemInBag,
+        Time:30.0,
+    }
+
+    recipe AbrirMacoVerdinha
+    {
+        VerdinhaPack,
+
+        Result:Verdinha=1,
+        Sound:PutItemInBag,
+        Time:10.0,
+        OnCanPerform:Recipe.OnCanPerform.DrainableSource,
+    }
+}
