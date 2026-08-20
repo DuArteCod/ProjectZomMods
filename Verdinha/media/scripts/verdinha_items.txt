@@ -1,0 +1,55 @@
+item Verdinha
+{
+    Type                = Normal,
+    DisplayName         = Verdinha,
+    Icon                = Cigarettes,
+    Weight              = 0.01,
+    Smokeable           = TRUE,
+    SmokeTime           = 100,
+    ReplaceOnUse        = CigaretteButt,
+    UseDelta            = 1,
+    HungerChange        = -50,
+    ThirstChange        = -50,
+    UnhappyChange       = -20,
+    BoredomChange       = -50,
+    StressChange        = -15,
+    Tooltip             = Tooltip_item_Verdinha,
+}
+
+item VerdinhaPack
+{
+    Type                = Normal,
+    DisplayName         = "10 da Verde",
+    Icon                = verdinha_pack,
+    Weight              = 0.1,
+    Count               = 10,
+    Smokeable           = TRUE,
+    SmokeTime           = 100,
+    ReplaceOnUse        = CigaretteButt,
+    UseDelta            = 0.1,
+    HungerChange        = -50,
+    ThirstChange        = -50,
+    UnhappyChange       = -20,
+    BoredomChange       = -50,
+    StressChange        = -15,
+    Tooltip             = Tooltip_item_VerdinhaPack,
+}
+
+item VerdinhaBox
+{
+    Type                = Normal,
+    DisplayName         = "100 da Braba",
+    Icon                = verdinha_box,
+    Weight              = 1.0,
+    Count               = 100,
+    Smokeable           = TRUE,
+    SmokeTime           = 100,
+    ReplaceOnUse        = CigaretteButt,
+    UseDelta            = 0.01,
+    HungerChange        = -50,
+    ThirstChange        = -50,
+    UnhappyChange       = -20,
+    BoredomChange        = -50,
+    StressChange        = -15,
+    Tooltip             = Tooltip_item_VerdinhaBox,
+}
