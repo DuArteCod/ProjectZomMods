@@ -1,0 +1,64 @@
+module Base
+{
+    item Verdinha
+    {
+        DisplayCategory = Junk ,
+        ItemType = base:food ,
+        Weight = 0.01 ,
+        Icon = verdinha ,
+        CantBeFrozen = true ,
+        CustomContextMenu = Smoke ,
+        EatType = Cigarettes ,
+        HungerChange = 5 ,
+        ThirstChange = 5 ,
+        OnEat = RecipeCodeOnEat.consumeNicotine ,
+        RequireInHandOrInventory = Base.CandleLit/Base.Matches/Base.Matchbox/Base.LighterDisposable/Base.Lighter/Base.LighterBBQ/Base.Lighter_Battery ,
+        StressChange = -15 ,
+        StaticModel = Cigarette_Lit ,
+        WorldStaticModel = Cigarette2 ,
+        Tags = base:smokeable ,
+        Eattime = 460 ,
+        InverseCoughProbability = 10 ,
+        InverseCoughProbabilitySmoker = 2 ,
+        UnhappyChange = -20 ,
+        BoredomChange = -50 ,
+        Tooltip = Tooltip_item_Verdinha ,
+    }
+
+item VerdinhaPack
+{
+    DisplayCategory = Junk ,
+    Weight = 0.2 ,
+    UseDelta = 0.05 ,
+    ItemType = base:drainable ,
+    UseWhileEquipped = false ,
+    KeepOnDeplete = false ,
+    Icon = verdinha_pack ,
+    StaticModel = Cigarette_Lit ,
+    WorldStaticModel = CigarettePack_Closed ,
+    Tags = base:packed;base:lessfull;base:consumable;base:smokable ,
+    EatType = Cigarettes ,
+    OnEat = RecipeCodeOnEat.consumeNicotine ,
+    StressChange = -15 ,
+    CustomEatSound = ,
+    Eattime = 460 ,
+    RequireInHandOrInventory = Base.CandleLit/Base.Matches/Base.Matchbox/Base.LighterDisposable/Base.Lighter/Base.LighterBBQ/Base.Lighter_Battery ,
+    CustomContextMenu = Smoke ,
+    InverseCoughProbability = 10 ,
+    InverseCoughProbabilitySmoker = 2 ,
+    UnhappyChange = -20 ,
+    BoredomChange = -50 ,
+    Tooltip = Tooltip_item_VerdinhaPack ,
+}
+    item VerdinhaBox
+    {
+        DisplayCategory = Junk ,
+        Weight = 2.0 ,
+        ItemType = base:normal ,
+        Icon = verdinha_box ,
+        WorldStaticModel = CigaretteCarton ,
+        Tags = base:ignorezombiedensity ,
+        DoubleClickRecipe = Abrir Caixa de Verdinha ,
+        Tooltip = Tooltip_item_VerdinhaBox ,
+    }
+}
